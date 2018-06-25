@@ -1,10 +1,7 @@
 package com.myth;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.ui.context.support.UiApplicationContextUtils;
 
 public class KnightMinsterMain {
 

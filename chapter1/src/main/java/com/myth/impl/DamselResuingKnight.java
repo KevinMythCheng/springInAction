@@ -1,7 +1,6 @@
 package com.myth.impl;
 
 import com.myth.Knight;
-import com.myth.Quest;
 
 /**
  * DamselResuingKnight 只有救RescueDamselQuest 的能力， 如果碰到了其他的Quest  是没有办法相救的，比如恶龙。

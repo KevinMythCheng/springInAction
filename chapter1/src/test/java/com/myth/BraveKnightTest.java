@@ -1,5 +1,6 @@
 package com.myth;
 
+import com.myth.Quest;
 import com.myth.impl.BraveKnight;
 
 import static org.mockito.Mockito.mock;

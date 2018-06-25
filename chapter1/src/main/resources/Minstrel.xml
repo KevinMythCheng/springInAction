@@ -5,15 +5,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                           http://www.springframework.org/schema/aop   http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
-    <bean id="knight" class="com.myth.impl.BraveKnight">
+    <bean id="knight" class="com.myth.soundsystem.impl.BraveKnight">
         <constructor-arg ref="quest"/>
     </bean>
 
-    <bean id="quest" class="com.myth.impl.SlayDragonQuest">
+    <bean id="quest" class="com.myth.soundsystem.impl.SlayDragonQuest">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 
-    <bean id="minstrel" class="com.myth.impl.Minstrel">
+    <bean id="minstrel" class="com.myth.soundsystem.impl.Minstrel">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 
