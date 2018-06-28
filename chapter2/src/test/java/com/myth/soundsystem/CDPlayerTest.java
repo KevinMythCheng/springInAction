@@ -34,9 +34,12 @@ public class CDPlayerTest {
         assertNotNull(cd);
     }
 
+    //TODO:ASSERTEQUAL  结果一样的 ， 但是报错误   说与期待值不一样。
     @Test
     public void play() {
         mediaPlayer.play();
+//        assertEquals(String.valueOf("Playing Sgt. Peppers Lonely Heart's Club Band" +
+//                " by The Beatles\n"), log.getLog().toString());
         assertNotSame(String.valueOf("Playing Sgt.Peppers Lonely Heart's Club Band" +
                 " by The Beatles\n"), log.getLog().toString());
     }
