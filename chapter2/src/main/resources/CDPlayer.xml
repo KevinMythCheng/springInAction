@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context">
+
+    <!--首先创建cd的实例-->
+    <bean id="compactDisc" class="com.myth.soundsystem.impl.SgtPappers">
+    </bean>
+
+    <!--<bean id="blankDisc" class="com.myth.soundsystem.impl.BlankDisc">
+        <constructor-arg value="Coming home"/>
+        <constructor-arg value="Skylar Grey"></constructor-arg>
+    </bean>-->
+
+    <!--使用构造器模式，但是出现了构造器的名字总有些奇怪-->
+    <!--<bean class="com.myth.soundsystem.impl.BlankDisc" c:title="Coming home" c:artist="Skylar Grey"></bean>-->
+
+    <!--使用了参数索引，这样子即使我们更改了索引的值，也是可以使用的-->
+    <bean class="com.myth.soundsystem.impl.BlankDisc" c:_0="Coming home" c:_1="Skylar Grey"></bean>
+    <!--然后CDplayer 进行播放 或者可以使用c命名空间的方式
+       要使用C命名模式的话，必须在顶部声明-->
+    <!--    <bean class="com.myth.soundsystem.impl.CDPlayer">
+            <constructor-arg ref="compactDisc"></constructor-arg>
+        </bean>-->
+
+    <!--使用起来确实比constructor-arg 方便很多
+    c:cd-ref="compactDisc"  c-：命名空间前缀 cd代表构造器名称 cd-ref代表构造器中引入的参数 要注入的bean的ID-->
+    <!--<bean id="cdPlayer" class="com.myth.soundsystem.impl.CDPlayer" c:cd-ref="compactDisc"></bean>-->
+    <!--也可以使用下面的这个方式，_0代表第一个参数，因为构造器是有可能改变的，或者有多个构造器，我们可以进行分辨
+    因为目前我们只有一个构造器，且只有一个参数，可以使用_-ref 作为引用-->
+    <bean id="cdPlayer" class="com.myth.soundsystem.impl.CDPlayer" c:_0-ref="compactDisc"></bean>
+</beans>
