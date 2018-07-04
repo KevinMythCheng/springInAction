@@ -15,10 +15,10 @@ public class CDPlayerConfig {
 
     //在JavaConfig中创建Bean的实例
     //同样的可以设置Bean 的名称
-    @Bean(name = "sgtPappers")
+/*    @Bean(name = "sgtPappers")
     public CompactDisc sgtPappers() {
         return new SgtPappers();
-    }
+    }*/
 
     //在CDPlayer中注入一张cd sgtPappers
 /*    @Bean
@@ -28,8 +28,8 @@ public class CDPlayerConfig {
 
     //因为Spring 是单例的 ， 所以这两个sgtPappers  其实是一个
     //可以使用带参数的方式进行注入，这样子不用每次在Java Config中声明Bean  可以使用注解的方式或者XML 的方式
-    @Bean
+/*    @Bean
     public CDPlayer anotherCDPlayer(CompactDisc compactDisc) {
         return new CDPlayer(compactDisc);
-    }
+    }*/
 }
