@@ -18,14 +18,14 @@ public class CDPlayer implements MediaPlayer {
     //如果发现多个Bean，Spring 将会抛出异常，表明没有明确指定的药选择哪个Bean 进行装配
     //也可以使用Inject来代替Autowired
 //    @Autowired(required = false)
-/*    @Autowired
+    @Autowired
     public CDPlayer(CompactDisc cd) {
         this.compactDisc = cd;
-    }*/
-    @Autowired
+    }
+/*    @Autowired
     public void setCompactDisc(CompactDisc cd) {
         this.compactDisc = cd;
-    }
+    }*/
 
     @Override
     public void play() {

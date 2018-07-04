@@ -6,6 +6,9 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/CDPlayerXML.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/CDPlayer.xml</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/myth/soundsystem/config/CDConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/resources/CDPlayer.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/CDPlayer.xml</file>
         </fileset>
       </configuration>
     </facet>

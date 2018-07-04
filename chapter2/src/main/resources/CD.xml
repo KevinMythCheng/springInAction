@@ -5,11 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--使用两个XML 互相注入-->
-    <import resource="CD.xml"/>
-    <!--使用Java Config 注入 如果由ref对象是不支持的-->
-
-    <!--<bean class="com.myth.soundsystem.config.CDConfig"/>-->
-    <!--创建cdPlayer的实例-->
-    <bean id="cdPlayer" class="com.myth.soundsystem.impl.CDPlayer" c:cd-ref="sgtPappers"></bean>
+    <!--首先创建cd的实例-->
+    <bean id="compactDisc" class="com.myth.soundsystem.impl.SgtPappers">
+    </bean>
 </beans>

@@ -40,7 +40,7 @@ public class CDPlayerTest {
         mediaPlayer.play();
 //        assertEquals(String.valueOf("Playing Sgt. Peppers Lonely Heart's Club Band" +
 //                " by The Beatles\n"), log.getLog().toString());
-        assertNotSame(String.valueOf("Playing Sgt.Peppers Lonely Heart's Club Band" +
-                " by The Beatles\n"), log.getLog().toString());
+//        assertNotSame(String.valueOf("Playing Sgt.Peppers Lonely Heart's Club Band" +
+//                " by The Beatles\n"), log.getLog().toString());
     }
 }
